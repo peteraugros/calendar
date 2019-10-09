@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calendar</title>
+  <!-- link to jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- linking js to html -->
+  <script src="script.js"></script>
+  <!-- linking css to html -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- linking to bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- link to font awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Work Day Scheduler</h1>
+      <p class="lead" id="date"></p>
+    </div>
+  </div>
+  <!-- main calendar table -->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr>
+        <th scope="row" id = 1 class="th 9">9:00 AM <input type="text" class="th 9"><button type="button" class="btn btn-primary"><img src="locked.png" class="image-div notLocked"></button></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 2 class="th 10">10:00 AM <input type="text" class="th 10"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 3 class="th 11">11:00 PM <input type="text" class="th 11"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 4 class="th 12">12:00 PM <input type="text" class="th 12"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 5 class="th 13">1:00 PM <input type="text" class="th 13"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 6 class="th 14">2:00 PM <input type="text" class="th 14"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 7 class="th 15">3:00 PM <input type="text" class="th 15"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 8 class="th 16">4:00 PM <input type="text" class="th 16"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+      <tr>
+        <th scope="row" id = 9 class="th 17">5:00 PM <input type="text" class="th 17"><button type="button" class="btn btn-primary notLocked"><img src="locked.png" class="image-div notLocked"></button></th></th>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+</body>
+
+</html>

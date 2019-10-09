@@ -1,0 +1,45 @@
+.display-4{
+    text-align: center;
+   
+}
+
+.jumbotron{
+    border-bottom: 5px solid black;
+}
+
+#date{
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.table{
+    box-shadow: 5px 10px #888888;
+}
+
+button{
+    float: right;
+    width: 100px;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+input{
+    border: 0;
+    outline: none;
+    width: 1000px;
+    height: 50px;
+    
+
+}
+th{
+    background-color: #d7e0da;
+    width: 100%;
+    border: 1px solid black;
+}
+input{
+    background-color: #d7e0da;
+}
