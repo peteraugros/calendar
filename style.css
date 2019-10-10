@@ -35,6 +35,7 @@ input{
     width: 1000px;
     height: 50px;
     background-color: #d7e0da;
+    text-align: center;
 
 }
 th{
@@ -45,4 +46,7 @@ th{
 
 tbody{
     width: 100%;
+}
+#clearAll{
+    margin-right: 15px;
 }

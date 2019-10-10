@@ -24,43 +24,46 @@
   <!-- jumbotron -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
+
       <h1 class="display-4">Work Day Scheduler</h1>
       <p class="lead" id="date"></p>
     </div>
   </div>
   <!-- main calendar table -->
   <table class="table table-hover">
+
+    <button id="clearAll" class="btn btn-danger">Clear All</button><br><br><br>
     <thead>
       <tr>
       </tr>
     </thead>
     <tbody id="tbody">
       <tr>
-        <th scope="row" id = 1 class="th 9">9:00 AM <input type="text" class="th 9 ls1 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary" value = "9"><img src="locked.png" class="image-div notLocked"></button></th>
+        <th scope="row" id = 1 class="th 9">9:00 AM <input type="text" class="th 9 input1" style="font-size: 30px;"><button type="button" class="btn btn-primary" id = "9">Save</button></th>
       </tr>
       <tr>
-        <th scope="row" id = 2 class="th 10">10:00 AM <input type="text" class="th 10 ls2 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "10"><img src="locked.png" class="image-div notLocked" value = "10"></button></th>
+        <th scope="row" id = 2 class="th 10">10:00 AM <input type="text" class="th 10 input2" style="font-size: 30px;" id="input2"><button type="button" class="btn btn-primary notLocked" id = "10">Save</button></th>
       </tr>
       <tr>
-        <th scope="row" id = 3 class="th 11">11:00 PM <input type="text" class="th 11 ls3 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "11"><img src="locked.png" class="image-div notLocked" value = "11"></button></th></th>
+        <th scope="row" id = 3 class="th 11">11:00 PM <input type="text" class="th 11 input3" style="font-size: 30px;" id="input3"><button type="button" class="btn btn-primary notLocked" id = "11">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 4 class="th 12">12:00 PM <input type="text" class="th 12 ls4 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "12"><img src="locked.png" class="image-div notLocked" value = "12"></button></th></th>
+        <th scope="row" id = 4 class="th 12">12:00 PM <input type="text" class="th 12 input4" style="font-size: 30px;" id="input4"><button type="button" class="btn btn-primary notLocked" id = "12">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 5 class="th 13">1:00 PM <input type="text" class="th 13 ls5 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "13"><img src="locked.png" class="image-div notLocked" value = "13"></button></th></th>
+        <th scope="row" id = 5 class="th 13">1:00 PM <input type="text" class="th 13 input5" style="font-size: 30px;" id="input5"><button type="button" class="btn btn-primary notLocked" id = "13">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 6 class="th 14">2:00 PM <input type="text" class="th 14 ls6 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "14"><img src="locked.png" class="image-div notLocked" value = "14"></button></th></th>
+        <th scope="row" id = 6 class="th 14">2:00 PM <input type="text" class="th 14 input6" style="font-size: 30px;" id="input6"><button type="button" class="btn btn-primary notLocked" id = "14">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 7 class="th 15">3:00 PM <input type="text" class="th 15 ls7 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "15"><img src="locked.png" class="image-div notLocked" value = "15"></button></th></th>
+        <th scope="row" id = 7 class="th 15">3:00 PM <input type="text" class="th 15 input7" style="font-size: 30px;" id="input7"><button type="button" class="btn btn-primary notLocked" id = "15">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 8 class="th 16">4:00 PM <input type="text" class="th 16 ls8 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "16"><img src="locked.png" class="image-div notLocked" value = "16"></button></th></th>
+        <th scope="row" id = 8 class="th 16">4:00 PM <input type="text" class="th 16 input8" style="font-size: 30px;" id="input8"><button type="button" class="btn btn-primary notLocked" id = "16">Save</button></th></th>
       </tr>
       <tr>
-        <th scope="row" id = 9 class="th 17">5:00 PM <input type="text" class="th 17 ls9 unlocked" style="font-size: 30px;"><button type="button" class="btn btn-primary notLocked" value = "17"><img src="locked.png" class="image-div notLocked" value = "17"></button></th></th>
+        <th scope="row" id = 9 class="th 17">5:00 PM <input type="text" class="th 17 input9" style="font-size: 30px;" id="input9"><button type="button" class="btn btn-primary notLocked" id = "17">Save</button></th></th>
       </tr>
 
     </tbody>

@@ -1,9 +1,7 @@
 
 $(document).ready(function () {
-    
 
-   
-    
+
     //variables to hold new date and time
     var dt = new Date();
     var dayDate = dt.toDateString();
@@ -30,76 +28,102 @@ $(document).ready(function () {
         }
     }
 
-    //event delegation for buttons and locks
-    var btn = $("#tbody");
-    btn.click(function (e) {
-        e.preventDefault();
+    //code for setting local storage for each button
+    $("#9").click(function () {
+        var nine = $(".input1").val();
+        localStorage.setItem("line1", nine);
+    })
 
-        var target = e.target;
+    $("#10").click(function () {
+        var ten = $(".input2").val();
+        localStorage.setItem("line2", ten);
+    })
 
-        if (target.matches("img") || (target.matches("button"))) {
+    $("#11").click(function () {
+        var eleven = $(".input3").val();
+        localStorage.setItem("line3", eleven);
+    })
+    $("#12").click(function () {
+        var twelve = $(".input4").val();
+        localStorage.setItem("line4", twelve);
+    })
+    $("#13").click(function () {
+        var thirteen = $(".input5").val();
+        localStorage.setItem("line5", thirteen);
+    })
 
-            //getting value of the target
-            var value = $(target).val();
+    $("#14").click(function () {
+        var fourteen = $(".input6").val();
+        localStorage.setItem("line6", fourteen);
+    })
 
-            //toggling text field to readonly and read
-            if ($("." + value).hasClass("unlocked")) {
-                $("." + value).attr("readonly", true);
-                $("." + value).removeClass("unlocked");
-                $("." + value).addClass("locked");
-            } else {
-                $("." + value).attr("readonly", false);
-                $("." + value).removeClass("locked");
-                $("." + value).addClass("unlocked");
+    $("#15").click(function () {
+        var fifteen = $(".input7").val();
+        localStorage.setItem("line7", fifteen);
+    })
 
-            }
+    $("#16").click(function () {
+        var sixteen = $(".input8").val();
+        localStorage.setItem("line8", sixteen);
+    })
 
-            //toggling lock images
-            if (target.matches("img")) {
-                if ($(target).hasClass("notLocked")) {
+    $("#17").click(function () {
+        var seventeen = $(".input9").val();
+        localStorage.setItem("line9", seventeen);
+    })
 
-                    $(target).attr("src", "closedLock.png");
-                    $(target).removeClass("notLocked");
-                    $(target).addClass("locked");
-                } else {
-                    $(target).attr("src", "locked.png");
-                    $(target).removeClass("locked");
-                    $(target).addClass("notLocked");
-                }
-            }
+getLocalStorage();
 
-            if (target.matches("button")) {
-                if ($(target).find("img").hasClass("notLocked")) {
+function getLocalStorage(){
+    //code for getting local storage for each input
+   
+        var line1 = localStorage.getItem("line1");
+        $(".input1").val(line1);
 
-                    $(target).find("img").attr("src", "closedLock.png");
-                    $(target).find("img").removeClass("notLocked");
-                    $(target).find("img").addClass("locked");
-                } else {
-                    $(target).find("img").attr("src", "locked.png");
-                    $(target).find("img").removeClass("locked");
-                    $(target).find("img").addClass("notLocked");
-                }
-            }
-        }
-  
-        //adding content to local storage
-        var set;
+        var line2 = localStorage.getItem("line2");
+        $(".input2").val(line2);
 
-        for (var i = 1; i < 10; i++) {
-            set = $(".ls" + i).val();
-            localStorage.setItem("ls" + i, set);
-        }
+        var line3 = localStorage.getItem("line3");
+        $(".input3").val(line3);
 
-     
+        var line4 = localStorage.getItem("line4");
+        $(".input4").val(line4);
 
-     
+        var line5 = localStorage.getItem("line5");
+        $(".input5").val(line5);
 
-        //end event delegation function
-    });
+        var line6 = localStorage.getItem("line6");
+        $(".input6").val(line6);
 
+        var line7 = localStorage.getItem("line7");
+        $(".input7").val(line7);
 
+        var line8 = localStorage.getItem("line8");
+        $(".input8").val(line8);
 
+        var line9 = localStorage.getItem("line9");
+        $(".input9").val(line9);
 
+    
+}
+
+    $("#clearAll").click(function(){
+
+       
+            localStorage.clear();
+            $(".input1").val(null);
+            $(".input2").val(null);
+            $(".input3").val(null);
+            $(".input4").val(null);
+            $(".input5").val(null);
+            $(".input6").val(null);
+            $(".input7").val(null);
+            $(".input8").val(null);
+            $(".input9").val(null);
+           
+    
+//end clearAll function
+    })
 
 
 
