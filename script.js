@@ -1,5 +1,9 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
+    
+
+   
+    
     //variables to hold new date and time
     var dt = new Date();
     var dayDate = dt.toDateString();
@@ -11,33 +15,46 @@ $(document).ready(function () {
     var dt = new Date();
     var time = dt.getHours();
 
-    //setting background colors for rows and text fields
-    var allRows = $(".th");
-
-    //looping through for the green
+    //looping through for the green background
     for (var i = 9; i < 18; i++) {
-       
-        if(time < i){
-           $("." + i).css("background-color", "green");
-        } 
+
+        if (time < i) {
+            $("." + i).css("background-color", "green");
+        }
     }
 
-    //looping through for the red
+    //looping through for the red background
     for (var i = 9; i < 18; i++) {
-        if(time === i){
+        if (time === i) {
             $("." + time).css("background-color", "red");
         }
     }
 
     //event delegation for buttons and locks
     var btn = $("#tbody");
-    btn.on("click", function (e) {
-        console.log(e);
+    btn.click(function (e) {
+        e.preventDefault();
 
         var target = e.target;
 
         if (target.matches("img") || (target.matches("button"))) {
 
+            //getting value of the target
+            var value = $(target).val();
+
+            //toggling text field to readonly and read
+            if ($("." + value).hasClass("unlocked")) {
+                $("." + value).attr("readonly", true);
+                $("." + value).removeClass("unlocked");
+                $("." + value).addClass("locked");
+            } else {
+                $("." + value).attr("readonly", false);
+                $("." + value).removeClass("locked");
+                $("." + value).addClass("unlocked");
+
+            }
+
+            //toggling lock images
             if (target.matches("img")) {
                 if ($(target).hasClass("notLocked")) {
 
@@ -49,11 +66,6 @@ $(document).ready(function () {
                     $(target).removeClass("locked");
                     $(target).addClass("notLocked");
                 }
-                //changing text field to toggle from edit to read only
-                var textInput = $(target).parents()[1].children("input");
-                $(textInput).css("background-color", "red");
-                $(textInput).attr("readonly", "readonly");
-                // txtCustomerID.Attributes.Remove("readonly")
             }
 
             if (target.matches("button")) {
@@ -69,10 +81,24 @@ $(document).ready(function () {
                 }
             }
         }
+  
+        //adding content to local storage
+        var set;
+
+        for (var i = 1; i < 10; i++) {
+            set = $(".ls" + i).val();
+            localStorage.setItem("ls" + i, set);
+        }
+
+     
+
+     
+
         //end event delegation function
     });
 
- 
+
+
 
 
 

@@ -28,11 +28,13 @@ img{
 }
 
 input{
+    font-weight: bold;
+    font-size: 50px;
     border: 0;
     outline: none;
     width: 1000px;
     height: 50px;
-    
+    background-color: #d7e0da;
 
 }
 th{
@@ -40,6 +42,7 @@ th{
     width: 100%;
     border: 1px solid black;
 }
-input{
-    background-color: #d7e0da;
+
+tbody{
+    width: 100%;
 }
