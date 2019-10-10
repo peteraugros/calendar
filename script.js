@@ -1,6 +1,6 @@
 
+   
 $(document).ready(function () {
-
 
     //variables to hold new date and time
     var dt = new Date();
@@ -103,13 +103,10 @@ function getLocalStorage(){
 
         var line9 = localStorage.getItem("line9");
         $(".input9").val(line9);
-
-    
 }
 
     $("#clearAll").click(function(){
 
-       
             localStorage.clear();
             $(".input1").val(null);
             $(".input2").val(null);
@@ -121,34 +118,25 @@ function getLocalStorage(){
             $(".input8").val(null);
             $(".input9").val(null);
            
-    
+
 //end clearAll function
     })
 
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'moonlight-movement1.mp3');
+    
+    audioElement.addEventListener('ended', function() {
+        this.play();
+    }, true);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $('#play').click(function() {
+        audioElement.play();
+        $("#play").text("Playing");
+    });
 
 
 
     //end document ready function
+
 });
 

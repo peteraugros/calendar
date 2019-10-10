@@ -1,14 +1,18 @@
 .display-4{
-    text-align: center;
+    text-align: left;
    
 }
 
 .jumbotron{
     border-bottom: 5px solid black;
+    background-image: url("home-office-336373__340.jpg");
+    background-size: cover;
+    color: white;
+    height: 600px;
 }
 
 #date{
-    text-align: center;
+    text-align: left;
     font-size: 25px;
     
 }
@@ -49,4 +53,7 @@ tbody{
 }
 #clearAll{
     margin-right: 15px;
+}
+.top-row{
+    border-top: 5px solid black;
 }
